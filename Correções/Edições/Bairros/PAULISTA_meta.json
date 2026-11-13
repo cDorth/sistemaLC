@@ -1,0 +1,24 @@
+{
+  "contract": "PAULISTA",
+  "region_hash": "395637eeebaa",
+  "n_setores": 1270,
+  "source": "BR_setores_CD2022.gpkg",
+  "downloaded_at": "2026-05-26T18:47:27.305814+00:00",
+  "n_edges_tagged_trans": {
+    "BAIRRO": 101054,
+    "NU": 0,
+    "FCU": 29502,
+    "AGLOM": 1692,
+    "SITUACAO": 118670
+  },
+  "n_edges_tagged_completa": {
+    "BAIRRO": 110712,
+    "NU": 0,
+    "FCU": 31622,
+    "AGLOM": 1742,
+    "SITUACAO": 129976
+  },
+  "last_run_mode": "full",
+  "last_run_at": "2026-05-26T18:50:32.239130+00:00",
+  "elapsed_s": 205.0
+}

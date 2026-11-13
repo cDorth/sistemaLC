@@ -1,0 +1,24 @@
+{
+  "contract": "VARZEA",
+  "region_hash": "3a337b314261",
+  "n_setores": 800,
+  "source": "BR_setores_CD2022.gpkg",
+  "downloaded_at": "2026-05-26T18:53:33.809380+00:00",
+  "n_edges_tagged_trans": {
+    "BAIRRO": 75615,
+    "NU": 206,
+    "FCU": 1603,
+    "AGLOM": 58,
+    "SITUACAO": 85135
+  },
+  "n_edges_tagged_completa": {
+    "BAIRRO": 86969,
+    "NU": 206,
+    "FCU": 1609,
+    "AGLOM": 58,
+    "SITUACAO": 97821
+  },
+  "last_run_mode": "full",
+  "last_run_at": "2026-05-26T18:55:47.264064+00:00",
+  "elapsed_s": 147.44
+}

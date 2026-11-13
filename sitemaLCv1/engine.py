@@ -3,7 +3,7 @@ Motor de Auditoria e Heatmap Espacial com SQLite (engine.py)
 Desenvolvido para sitemaLCv1 - Locar Saneamento Ambiental.
 
 Executa o cruzamento da telemetria Inlog com a malha da cidade diretamente
-no banco SQLite de alta velocidade, calculando métricas e centróides de setores.
+no banco SQLite de alta velocidade, calculando métricas, centróides e atributos editáveis.
 """
 
 import io
@@ -20,9 +20,7 @@ class HeatmapEngine:
         self.inlog = InlogService()
 
     def processar_ou_obter_auditoria(self, contrato_id: str, data_iso: str, turno: str = "DIURNO", forcar_reprocessamento: bool = False) -> Dict[str, Any]:
-        """
-        Executa a auditoria da cidade na data informada ou recupera do SQLite se já processado.
-        """
+        """Executa a auditoria da cidade na data informada ou recupera do SQLite se já processado."""
         contrato_id = contrato_id.lower().strip()
         conn = db.get_connection()
         cur = conn.cursor()
@@ -60,7 +58,7 @@ class HeatmapEngine:
 
         # 5. Obtém todos os segmentos da cidade
         cur.execute("""
-            SELECT id, fid, nome_rua, setor, extensao_m, geom_json 
+            SELECT id, fid, nome_rua, setor, tipo, is_manual, is_priority, extensao_m, geom_json 
             FROM segmentos_viarios 
             WHERE contrato_id = ?
         """, (contrato_id,))
@@ -131,14 +129,14 @@ class HeatmapEngine:
         return res
 
     def _montar_resposta_geojson(self, conn: Any, audit_id: int, audit_row: Dict[str, Any]) -> Dict[str, Any]:
-        """Gera o GeoJSON com metadados de setores, centróides e veículos para os filtros avançados."""
+        """Gera o GeoJSON com IDs reais e dados completos para edição e auditoria."""
         cur = conn.cursor()
         
         cur.execute("SELECT * FROM contratos WHERE id = ?", (audit_row["contrato_id"],))
         c_row = cur.fetchone()
         
         cur.execute("""
-            SELECT s.fid, s.nome_rua, s.setor, s.extensao_m, s.geom_json, d.status, d.placas_responsaveis
+            SELECT s.id, s.fid, s.nome_rua, s.setor, s.tipo, s.is_manual, s.is_priority, s.extensao_m, s.geom_json, d.status, d.placas_responsaveis
             FROM segmentos_viarios s
             JOIN auditoria_detalhes d ON d.segmento_id = s.id
             WHERE d.auditoria_id = ?
@@ -162,7 +160,6 @@ class HeatmapEngine:
             ext = r["extensao_m"]
             st = r["status"]
 
-            # Acumula dados para o centróide e estatísticas do setor
             if setor not in setores_dados:
                 setores_dados[setor] = {
                     "codigo": setor,
@@ -184,7 +181,6 @@ class HeatmapEngine:
                 setores_dados[setor]["veiculos"].add(p)
 
             for pt in coords:
-                # pt is [lon, lat]
                 setores_dados[setor]["pontos"].append((pt[1], pt[0]))
 
             features.append({
@@ -194,9 +190,13 @@ class HeatmapEngine:
                     "coordinates": coords
                 },
                 "properties": {
+                    "id": r["id"],
                     "fid": r["fid"],
                     "street_name": r["nome_rua"],
                     "sector": setor,
+                    "tipo": r["tipo"] or "COLETA",
+                    "is_manual": bool(r["is_manual"]),
+                    "is_priority": bool(r["is_priority"]),
                     "len_m": ext,
                     "status": st,
                     "color": cores_map.get(st, "#00ff00"),
@@ -204,7 +204,6 @@ class HeatmapEngine:
                 }
             })
 
-        # Calcula o centróide e formata a lista de setores
         setores_lista = []
         for s_cod, s_info in sorted(setores_dados.items(), key=lambda x: x[0]):
             pts = s_info["pontos"]

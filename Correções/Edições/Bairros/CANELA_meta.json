@@ -1,0 +1,24 @@
+{
+  "contract": "CANELA",
+  "region_hash": "3eb735e875e8",
+  "n_setores": 146,
+  "source": "BR_setores_CD2022.gpkg",
+  "downloaded_at": "2026-05-26T18:14:43.669072+00:00",
+  "n_edges_tagged_trans": {
+    "BAIRRO": 19606,
+    "NU": 0,
+    "FCU": 232,
+    "AGLOM": 22,
+    "SITUACAO": 45607
+  },
+  "n_edges_tagged_completa": {
+    "BAIRRO": 26398,
+    "NU": 0,
+    "FCU": 244,
+    "AGLOM": 22,
+    "SITUACAO": 64355
+  },
+  "last_run_mode": "full",
+  "last_run_at": "2026-05-26T18:16:32.514835+00:00",
+  "elapsed_s": 116.4
+}

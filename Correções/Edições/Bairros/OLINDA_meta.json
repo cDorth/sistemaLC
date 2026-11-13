@@ -1,0 +1,24 @@
+{
+  "contract": "OLINDA",
+  "region_hash": "7cf06bb70cac",
+  "n_setores": 1716,
+  "source": "BR_setores_CD2022.gpkg",
+  "downloaded_at": "2026-05-26T18:44:02.486069+00:00",
+  "n_edges_tagged_trans": {
+    "BAIRRO": 114457,
+    "NU": 0,
+    "FCU": 41555,
+    "AGLOM": 0,
+    "SITUACAO": 119683
+  },
+  "n_edges_tagged_completa": {
+    "BAIRRO": 131094,
+    "NU": 0,
+    "FCU": 47635,
+    "AGLOM": 0,
+    "SITUACAO": 136462
+  },
+  "last_run_mode": "full",
+  "last_run_at": "2026-05-26T18:47:07.139470+00:00",
+  "elapsed_s": 205.49
+}

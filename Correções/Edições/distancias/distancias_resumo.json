@@ -1,0 +1,152 @@
+{
+  "CABO": {
+    "garagem_aterro": [
+      {
+        "aterro": "CTR - CDS",
+        "distancia_km": NaN,
+        "tempo_estimado_min": NaN
+      }
+    ],
+    "rotas": 0,
+    "dist_garagem_rota_media_km": null,
+    "dist_rota_aterro_media_km": null
+  },
+  "CANELA": {
+    "garagem_aterro": [
+      {
+        "aterro": "TRA - CAN",
+        "distancia_km": 0.11,
+        "tempo_estimado_min": 0.5
+      }
+    ],
+    "rotas": 18,
+    "dist_garagem_rota_media_km": 6.64,
+    "dist_rota_aterro_media_km": 5.24
+  },
+  "CARUARU": {
+    "garagem_aterro": [
+      {
+        "aterro": "ATR - CAR",
+        "distancia_km": 19.13,
+        "tempo_estimado_min": 61.3
+      }
+    ],
+    "rotas": 80,
+    "dist_garagem_rota_media_km": 8.71,
+    "dist_rota_aterro_media_km": 17.1
+  },
+  "CUIABA": {
+    "garagem_aterro": [
+      {
+        "aterro": "ATR - CBA",
+        "distancia_km": 10.97,
+        "tempo_estimado_min": 49.7
+      }
+    ],
+    "rotas": 91,
+    "dist_garagem_rota_media_km": 16.0,
+    "dist_rota_aterro_media_km": 20.41
+  },
+  "GARANHUNS": {
+    "garagem_aterro": [
+      {
+        "aterro": "ATR - GAR",
+        "distancia_km": 10.17,
+        "tempo_estimado_min": 36.8
+      }
+    ],
+    "rotas": 34,
+    "dist_garagem_rota_media_km": 2.61,
+    "dist_rota_aterro_media_km": 9.42
+  },
+  "JABOATAO": {
+    "garagem_aterro": [
+      {
+        "aterro": "CTR - CDS",
+        "distancia_km": 6.34,
+        "tempo_estimado_min": 24.4
+      }
+    ],
+    "rotas": 20,
+    "dist_garagem_rota_media_km": 0.89,
+    "dist_rota_aterro_media_km": 5.26
+  },
+  "JEQUIE": {
+    "garagem_aterro": [
+      {
+        "aterro": "ATR - JEQ",
+        "distancia_km": 5.15,
+        "tempo_estimado_min": 16.8
+      }
+    ],
+    "rotas": 18,
+    "dist_garagem_rota_media_km": 6.68,
+    "dist_rota_aterro_media_km": 14.13
+  },
+  "NOVO HAMBURGO": {
+    "garagem_aterro": [
+      {
+        "aterro": "TRA - NH",
+        "distancia_km": 9.14,
+        "tempo_estimado_min": 39.4
+      }
+    ],
+    "rotas": 31,
+    "dist_garagem_rota_media_km": 4.97,
+    "dist_rota_aterro_media_km": 10.75
+  },
+  "OLINDA": {
+    "garagem_aterro": [
+      {
+        "aterro": "TRA - PLT",
+        "distancia_km": 9.69,
+        "tempo_estimado_min": 51.0
+      }
+    ],
+    "rotas": 40,
+    "dist_garagem_rota_media_km": 4.08,
+    "dist_rota_aterro_media_km": 7.38
+  },
+  "PAULISTA": {
+    "garagem_aterro": [
+      {
+        "aterro": "TRA - PLT",
+        "distancia_km": 0.19,
+        "tempo_estimado_min": 1.3
+      }
+    ],
+    "rotas": 52,
+    "dist_garagem_rota_media_km": 6.33,
+    "dist_rota_aterro_media_km": 7.44
+  },
+  "PESQUEIRA": {
+    "garagem_aterro": [
+      {
+        "aterro": "ATR - PSQ",
+        "distancia_km": 4.55,
+        "tempo_estimado_min": 10.1
+      }
+    ],
+    "rotas": 13,
+    "dist_garagem_rota_media_km": 8.56,
+    "dist_rota_aterro_media_km": 10.54
+  },
+  "VARZEA": {
+    "garagem_aterro": [],
+    "rotas": 0,
+    "dist_garagem_rota_media_km": null,
+    "dist_rota_aterro_media_km": null
+  },
+  "VITORIA": {
+    "garagem_aterro": [
+      {
+        "aterro": "TRA - VSA",
+        "distancia_km": 6.51,
+        "tempo_estimado_min": 18.1
+      }
+    ],
+    "rotas": 21,
+    "dist_garagem_rota_media_km": 2.07,
+    "dist_rota_aterro_media_km": 6.78
+  }
+}

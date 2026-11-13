@@ -1,0 +1,24 @@
+{
+  "contract": "JEQUIE",
+  "region_hash": "f01acb4c7108",
+  "n_setores": 376,
+  "source": "BR_setores_CD2022.gpkg",
+  "downloaded_at": "2026-05-26T18:37:33.149280+00:00",
+  "n_edges_tagged_trans": {
+    "BAIRRO": 0,
+    "NU": 0,
+    "FCU": 2885,
+    "AGLOM": 2105,
+    "SITUACAO": 87932
+  },
+  "n_edges_tagged_completa": {
+    "BAIRRO": 0,
+    "NU": 0,
+    "FCU": 3019,
+    "AGLOM": 2141,
+    "SITUACAO": 90922
+  },
+  "last_run_mode": "full",
+  "last_run_at": "2026-05-26T18:41:11.208118+00:00",
+  "elapsed_s": 232.34
+}

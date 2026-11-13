@@ -1,0 +1,24 @@
+{
+  "contract": "CUIABA",
+  "region_hash": "5cb2a1366560",
+  "n_setores": 1352,
+  "source": "BR_setores_CD2022.gpkg",
+  "downloaded_at": "2026-05-26T18:25:54.383056+00:00",
+  "n_edges_tagged_trans": {
+    "BAIRRO": 110009,
+    "NU": 687,
+    "FCU": 13038,
+    "AGLOM": 10,
+    "SITUACAO": 174068
+  },
+  "n_edges_tagged_completa": {
+    "BAIRRO": 139742,
+    "NU": 721,
+    "FCU": 13830,
+    "AGLOM": 10,
+    "SITUACAO": 227999
+  },
+  "last_run_mode": "full",
+  "last_run_at": "2026-05-26T18:31:42.103574+00:00",
+  "elapsed_s": 378.61
+}

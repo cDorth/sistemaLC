@@ -23,7 +23,7 @@ if not exist "%~dp0.env" (
 echo [3/3] Iniciando Servidor Operacional Locar atualizado...
 echo.
 echo Abrindo navegador em: http://127.0.0.1:8080
-start http://127.0.0.1:8080
+start http://127.0.0.1:8080?t=%RANDOM%
 
 python "%~dp0app.py"
 pause

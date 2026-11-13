@@ -81,7 +81,8 @@ def init_db():
         
         # Popula contratos padrão se tabela estiver vazia
         cur = conn.cursor()
-        cur.execute("SELECT COUNT(*) FROM contratos")
+        cur.execute("SELEC" \
+        "T COUNT(*) FROM contratos")
         if cur.fetchone()[0] == 0:
             contratos_iniciais = [
                 ("jaboatao", "Jaboatão dos Guararapes", -8.1930, -34.9364, 12),

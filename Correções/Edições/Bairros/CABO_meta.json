@@ -1,0 +1,24 @@
+{
+  "contract": "CABO",
+  "region_hash": "80762f192bb0",
+  "n_setores": 671,
+  "source": "BR_setores_CD2022.gpkg",
+  "downloaded_at": "2026-05-26T18:09:04.113749+00:00",
+  "n_edges_tagged_trans": {
+    "BAIRRO": 67747,
+    "NU": 4552,
+    "FCU": 28894,
+    "AGLOM": 3361,
+    "SITUACAO": 148210
+  },
+  "n_edges_tagged_completa": {
+    "BAIRRO": 82766,
+    "NU": 5399,
+    "FCU": 31062,
+    "AGLOM": 4117,
+    "SITUACAO": 209418
+  },
+  "last_run_mode": "full",
+  "last_run_at": "2026-05-26T18:14:35.978941+00:00",
+  "elapsed_s": 360.32
+}
